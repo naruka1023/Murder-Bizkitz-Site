@@ -1,6 +1,6 @@
 (function () {
 
-  angular.module('loc8rApp', ['ngRoute', 'ngSanitize', 'ui.bootstrap']);
+  angular.module('loc8rApp', ['ngRoute', 'ui.bootstrap', 'ngAnimate', 'thatisuday.ng-image-gallery']);
 
   function config ($routeProvider, $locationProvider) {
     $routeProvider
@@ -9,14 +9,24 @@
         controller: 'homeCtrl',
         controllerAs: 'vm'
       })
-      .when('/about', {
-        templateUrl: '/common/views/genericText.view.html',
-        controller: 'aboutCtrl',
+      .when('/guestbook', {
+        templateUrl: '/guestbook/guestbook.view.html',
+        controller: 'guestBookCtrl',
         controllerAs: 'vm'
       })
-      .when('/location/:locationid', {
-        templateUrl: '/locationDetail/locationDetail.view.html',
-        controller: 'locationDetailCtrl',
+      .when('/info', {
+        templateUrl: '/info/info.view.html',
+        controller: 'infoCtrl',
+        controllerAs: 'vm'
+      })
+      .when('/tour', {
+        templateUrl: '/tour/tour.view.html',
+        controller: 'tourCtrl', 
+        css: "stylesheets/photoStyle.css"
+      })
+      .when('/photos', {
+        templateUrl: '/photos/photos.view.html',
+        controller: 'photosCtrl',
         controllerAs: 'vm'
       })
       .otherwise({redirectTo: '/'});
@@ -25,8 +35,10 @@
     $locationProvider.html5Mode(true);
   }
 
-  angular
+ angular
     .module('loc8rApp')
     .config(['$routeProvider', '$locationProvider', config]);
+  
+
 
 })();

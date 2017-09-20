@@ -1,9 +1,42 @@
-.review {padding-bottom: 5px;}
-.panel-body.review-container {padding-top: 0;}
-.review-header {margin-bottom: 10px;}
-.reviewAuthor {margin: 0 5px;}
-.reviewTimestamp {color: #ccc;}
 
-.label-facility {margin-right: 2px}
-.rating-stars {margin-left: 3px;}
-#filter {margin-left: 4px;}
+#backgroundImage {
+    background-image : url("../images/background/backgroundHome.png");
+    background-size: cover;
+}
+#guestBookImage {
+    background-image : url("../images/background/guest.png");
+    background-size: cover;
+}
+
+#infoImage {
+    background-image : url("../images/background/infopage.png");
+    background-size: cover;
+}
+#tourImage {
+ background-image : url("../images/background/tour.png");
+ background-size: cover;
+}
+#photosImage {
+    background-image : url("../images/background/photos.png");
+    background-size: cover;
+}
+#homeButton{
+    position:absolute;
+    top:10px;
+    left:10px;
+}
+.links{
+    
+    position:absolute;
+    right:10px;
+    bottom:10px;
+}div.logo{
+    position:absolute ;
+    right: 150px ;
+    top: 150px ;
+}
+.buttons{
+    position:absolute ;
+    left: 10px ;
+    top: 10%
+}

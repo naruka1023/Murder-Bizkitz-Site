@@ -12,7 +12,7 @@ var routes = require('./app_server/views/routes/index');
 
 var app = express();
 
-// view engine setup
+
 app.set('views', path.join(__dirname, 'app_server', 'views'));
 app.set('view engine', 'jade');
 
@@ -35,7 +35,7 @@ fs.writeFile('public/angular/loc8r.min.js', uglified.code, function (err){
   }
 });
 
-// uncomment after placing your favicon in /public
+
 //app.use(favicon(__dirname + '/public/favicon.ico'));
 app.use(logger('dev'));
 app.use(bodyParser.json());
